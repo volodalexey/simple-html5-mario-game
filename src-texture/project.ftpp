@@ -1,0 +1,936 @@
+{
+  "meta": {
+    "version": "0.6.7"
+  },
+  "savePath": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture",
+  "images": [
+    {
+      "name": "PlayerRunLeft-000.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-000.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-001.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-001.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-002.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-002.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-003.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-003.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-004.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-004.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-005.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-005.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-006.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-006.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-007.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-007.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-008.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-008.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-009.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-009.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-010.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-010.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-011.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-011.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-012.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-012.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-013.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-013.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-014.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-014.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-015.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-015.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-016.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-016.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-017.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-017.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-018.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-018.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-019.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-019.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-020.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-020.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-021.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-021.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-022.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-022.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-023.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-023.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-024.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-024.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-025.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-025.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-026.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-026.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-027.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-027.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-028.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-028.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunLeft-029.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-029.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-000.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-000.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-001.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-001.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-002.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-002.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-003.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-003.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-004.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-004.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-005.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-005.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-006.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-006.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-007.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-007.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-008.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-008.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-009.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-009.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-010.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-010.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-011.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-011.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-012.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-012.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-013.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-013.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-014.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-014.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-015.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-015.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-016.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-016.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-017.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-017.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-018.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-018.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-019.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-019.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-020.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-020.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-021.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-021.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-022.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-022.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-023.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-023.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-024.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-024.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-025.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-025.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-026.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-026.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-027.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-027.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-028.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-028.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerRunRight-029.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunRight-029.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-000.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-000.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-001.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-001.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-002.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-002.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-003.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-003.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-004.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-004.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-005.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-005.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-006.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-006.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-007.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-007.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-008.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-008.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-009.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-009.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-010.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-010.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-011.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-011.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-012.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-012.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-013.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-013.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-014.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-014.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-015.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-015.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-016.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-016.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-017.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-017.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-018.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-018.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-019.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-019.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-020.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-020.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-021.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-021.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-022.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-022.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-023.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-023.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-024.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-024.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-025.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-025.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-026.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-026.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-027.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-027.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-028.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-028.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-029.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-029.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-030.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-030.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-031.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-031.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-032.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-032.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-033.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-033.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-034.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-034.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-035.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-035.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-036.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-036.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-037.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-037.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-038.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-038.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-039.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-039.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-040.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-040.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-041.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-041.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-042.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-042.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-043.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-043.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-044.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-044.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-045.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-045.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-046.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-046.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-047.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-047.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-048.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-048.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-049.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-049.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-050.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-050.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-051.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-051.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-052.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-052.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-053.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-053.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-054.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-054.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-055.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-055.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-056.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-056.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-057.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-057.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-058.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-058.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandLeft-059.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandLeft-059.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-000.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-000.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-001.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-001.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-002.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-002.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-003.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-003.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-004.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-004.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-005.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-005.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-006.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-006.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-007.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-007.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-008.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-008.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-009.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-009.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-010.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-010.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-011.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-011.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-012.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-012.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-013.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-013.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-014.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-014.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-015.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-015.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-016.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-016.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-017.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-017.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-018.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-018.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-019.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-019.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-020.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-020.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-021.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-021.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-022.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-022.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-023.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-023.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-024.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-024.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-025.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-025.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-026.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-026.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-027.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-027.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-028.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-028.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-029.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-029.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-030.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-030.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-031.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-031.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-032.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-032.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-033.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-033.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-034.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-034.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-035.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-035.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-036.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-036.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-037.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-037.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-038.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-038.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-039.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-039.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-040.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-040.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-041.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-041.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-042.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-042.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-043.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-043.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-044.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-044.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-045.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-045.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-046.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-046.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-047.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-047.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-048.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-048.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-049.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-049.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-050.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-050.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-051.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-051.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-052.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-052.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-053.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-053.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-054.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-054.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-055.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-055.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-056.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-056.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-057.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-057.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-058.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-058.png",
+      "folder": ""
+    },
+    {
+      "name": "PlayerStandRight-059.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerStandRight-059.png",
+      "folder": ""
+    }
+  ],
+  "folders": [],
+  "packOptions": {
+    "textureName": "spritesheet",
+    "textureFormat": "png",
+    "removeFileExtension": false,
+    "prependFolderName": true,
+    "base64Export": false,
+    "tinify": false,
+    "tinifyKey": "",
+    "scale": 1,
+    "filter": "none",
+    "exporter": "JSON (hash)",
+    "fileName": "pack-result",
+    "savePath": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture",
+    "width": 8000,
+    "height": 8000,
+    "fixedSize": false,
+    "powerOfTwo": false,
+    "padding": 1,
+    "extrude": 0,
+    "allowRotation": false,
+    "allowTrim": true,
+    "trimMode": "trim",
+    "alphaThreshold": "0",
+    "detectIdentical": true,
+    "packer": "MaxRectsPacker",
+    "packerMethod": "Smart"
+  }
+}
