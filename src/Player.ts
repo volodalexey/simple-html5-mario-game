@@ -1,5 +1,5 @@
 import { AnimatedSprite, Container, Graphics, type Texture } from 'pixi.js'
-import { logPlayerBox, logPlayerBounds, logPlayerGravity, logPlayerMove } from './logger'
+import { logPlayerBox, logPlayerBounds, logPlayerGravity, logPlayerMove, logPlayerDirection } from './logger'
 
 export interface IPlayerOptions {
   textures: {
@@ -19,9 +19,10 @@ export enum PlayerAnimation {
 
 export class Player extends Container {
   static ANIMATION = PlayerAnimation
-  public isPressed = false
-  public moveSpeed = 1
-  public jumpSpeed = 10
+  public pointerXDown = -1
+  public pointerYDown = -1
+  public moveSpeed = 8
+  public jumpSpeed = 20
 
   private readonly directionPressed: Record<'top' | 'right' | 'bottom' | 'left', boolean> = {
     top: false,
@@ -35,7 +36,6 @@ export class Player extends Container {
     vy: 0
   }
 
-  public health = 100
   public animation!: PlayerAnimation
   public idleLeft!: AnimatedSprite
   public idleRight!: AnimatedSprite
@@ -43,9 +43,13 @@ export class Player extends Container {
   public runRight!: AnimatedSprite
   public playerBox!: Graphics
   public settings = {
+    scale: 0.375,
     animationIdleSpeed: 0.2,
-    animationRunSpeed: 0.2,
-    spritesBoxColor: 0x0ea5e9
+    animationRunSpeed: 1,
+    spritesBoxColorTL: 0x0ea5e9,
+    spritesBoxColorTR: 0xa3e635,
+    spritesBoxColorBR: 0xe11d48,
+    spritesBoxColorBL: 0xeab308
   }
 
   constructor (options: IPlayerOptions) {
@@ -65,9 +69,9 @@ export class Player extends Container {
     }
   }: IPlayerOptions): void {
     const { settings } = this
-    const spritesBox = new Graphics()
-    this.addChild(spritesBox)
-    this.playerBox = spritesBox
+    const playerBox = new Graphics()
+    this.addChild(playerBox)
+    this.playerBox = playerBox
 
     const spritesContainer = new Container()
 
@@ -91,12 +95,35 @@ export class Player extends Container {
     spritesContainer.addChild(runRight)
     this.runRight = runRight
 
+    spritesContainer.scale.set(settings.scale)
+
     this.addChild(spritesContainer)
   }
 
+  isRunning (): boolean {
+    return [PlayerAnimation.runLeft, PlayerAnimation.runRight].includes(this.animation)
+  }
+
+  getCenter (): { centerX: number, centerY: number } {
+    return {
+      centerX: this.x + this.width / 2,
+      centerY: this.y + this.height / 2
+    }
+  }
+
   draw (_: IPlayerOptions): void {
-    this.playerBox.beginFill(this.settings.spritesBoxColor)
-    this.playerBox.drawRect(0, 0, this.width, this.height)
+    const { centerX, centerY } = this.getCenter()
+    this.playerBox.beginFill(this.settings.spritesBoxColorTL)
+    this.playerBox.drawRect(0, 0, centerX, centerY)
+    this.playerBox.endFill()
+    this.playerBox.beginFill(this.settings.spritesBoxColorTR)
+    this.playerBox.drawRect(centerX, 0, centerX, centerY)
+    this.playerBox.endFill()
+    this.playerBox.beginFill(this.settings.spritesBoxColorBL)
+    this.playerBox.drawRect(0, centerY, centerX, centerY)
+    this.playerBox.endFill()
+    this.playerBox.beginFill(this.settings.spritesBoxColorBR)
+    this.playerBox.drawRect(centerX, centerY, centerX, centerY)
     this.playerBox.endFill()
     this.playerBox.alpha = logPlayerBox.enabled ? 0.5 : 0
   }
@@ -136,31 +163,33 @@ export class Player extends Container {
     this.directionPressed.bottom = pressed
   }
 
+  isPointerDown (): boolean {
+    return this.pointerXDown >= 0 && this.pointerYDown >= 0
+  }
+
   handleMove (pressed: boolean | undefined, x: number, y: number): void {
     const { directionPressed } = this
     if (typeof pressed === 'boolean') {
-      this.isPressed = pressed
+      this.pointerXDown = pressed ? x : -1
+      this.pointerYDown = pressed ? y : -1
     }
 
     this.releaseAllPressures()
-    if (this.isPressed) {
-      const { top, right, bottom, left } = this.getBounds()
-
-      if (x >= right) {
+    const { centerX, centerY } = this.getCenter()
+    if (this.isPointerDown()) {
+      if (x > centerX) {
         directionPressed.right = true
-      } else if (x <= left) {
+      } else if (x < centerX) {
         directionPressed.left = true
       }
 
-      if (y >= bottom) {
+      if (y > centerY) {
         directionPressed.bottom = true
-      } else if (y <= top) {
+      } else if (y < centerY) {
         directionPressed.top = true
       }
-
-      if (x < right && x > left && y > top && y < bottom) {
-        directionPressed.bottom = true
-      }
+      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+      logPlayerDirection(`dp-t=${directionPressed.top} dp-r=${directionPressed.right} dp-b=${directionPressed.bottom} dp-l=${directionPressed.left}`)
     }
   }
 
@@ -169,19 +198,19 @@ export class Player extends Container {
     this.stopAllAnimations()
     switch (animation) {
       case PlayerAnimation.idleLeft:
-        this.idleLeft.gotoAndPlay(0)
+        this.idleLeft.play()
         this.idleLeft.visible = true
         break
       case PlayerAnimation.idleRight:
-        this.idleRight.gotoAndPlay(0)
+        this.idleRight.play()
         this.idleRight.visible = true
         break
       case PlayerAnimation.runLeft:
-        this.runLeft.gotoAndPlay(0)
+        this.runLeft.play()
         this.runLeft.visible = true
         break
       case PlayerAnimation.runRight:
-        this.runRight.gotoAndPlay(0)
+        this.runRight.play()
         this.runRight.visible = true
         break
     }
@@ -209,6 +238,9 @@ export class Player extends Container {
     levelBottom: number
   }): void {
     const { position, velocity, directionPressed, jumpSpeed, moveSpeed } = this
+    // if (this.isPointerDown()) {
+    //   this.handleMove(undefined, this.pointerXDown, this.pointerYDown)
+    // }
     if (directionPressed.top && velocity.vy === 0) {
       velocity.vy = -jumpSpeed
     }
@@ -235,7 +267,7 @@ export class Player extends Container {
     logPlayerMove(`Move left=${left} right=${right} vy=${velocity.vx}`)
     if (left + velocity.vx < levelLeft) {
       velocity.vx = 0
-      position.x = levelLeft - width
+      position.x = levelLeft
     } else if (right + velocity.vx > levelRight) {
       velocity.vx = 0
       position.x = levelRight - width

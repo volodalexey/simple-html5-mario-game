@@ -13,7 +13,7 @@ interface ISidescrollSceneOptions {
 
 export class SidescrollScene extends Container implements IScene {
   public gravity = 0.7
-  public floorY = 480
+  public floorY = 731
   public gameEnded = false
 
   public background!: TilingSprite
@@ -27,7 +27,7 @@ export class SidescrollScene extends Container implements IScene {
   }
 
   setup ({ viewWidth, viewHeight, backgroundTexture, playerTextures }: ISidescrollSceneOptions): void {
-    this.background = new TilingSprite(backgroundTexture)
+    this.background = new TilingSprite(backgroundTexture, viewWidth, viewHeight)
     this.addChild(this.background)
 
     this.player = new Player({ textures: playerTextures })
@@ -104,14 +104,11 @@ export class SidescrollScene extends Container implements IScene {
   handleKeyDown = (e: KeyboardEvent): void => {
     logKeydown(`${e.code} ${e.key}`)
     switch (e.code) {
-      case 'KeyW': case 'ArrowUp':
+      case 'KeyW': case 'ArrowUp': case 'Space': case 'ShiftLeft':
         this.player.setTopDirectionPressed(true)
         break
       case 'KeyA': case 'ArrowLeft':
         this.player.setLeftDirectionPressed(true)
-        break
-      case 'KeyS': case 'Space': case 'ShiftLeft': case 'ArrowDown': case 'Numpad0': case 'ShiftRight':
-        this.player.setBottomDirectionPressed(true)
         break
       case 'KeyD':case 'ArrowRight':
         this.player.setRightDirectionPressed(true)
@@ -122,14 +119,11 @@ export class SidescrollScene extends Container implements IScene {
   handleKeyUp = (e: KeyboardEvent): void => {
     logKeyup(`${e.code} ${e.key}`)
     switch (e.code) {
-      case 'KeyW': case 'ArrowUp':
+      case 'KeyW': case 'ArrowUp': case 'Space': case 'ShiftLeft':
         this.player.setTopDirectionPressed(false)
         break
       case 'KeyA': case 'ArrowLeft':
         this.player.setLeftDirectionPressed(false)
-        break
-      case 'KeyS': case 'Space': case 'ShiftLeft': case 'ArrowDown': case 'Numpad0': case 'ShiftRight':
-        this.player.setBottomDirectionPressed(false)
         break
       case 'KeyD':case 'ArrowRight':
         this.player.setRightDirectionPressed(false)
