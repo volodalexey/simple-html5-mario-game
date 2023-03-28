@@ -3,14 +3,14 @@ import { logLayout, logPointerEvent, logKeydown, logKeyup, logPlayerBounds, logP
 import { type IScene } from './SceneManager'
 import { StartModal } from './StartModal'
 import { Player, type IPlayerOptions } from './Player'
-import { Platform } from './Platform'
+import { Platforms } from './Platforms'
 
 interface ISidescrollSceneOptions {
   viewWidth: number
   viewHeight: number
   backgroundTexture: Texture
-  platformTexture: Texture
   hillsTexture: Texture
+  platformTexture: Texture
   platformSmallTallTexture: Texture
   playerTextures: IPlayerOptions['textures']
 }
@@ -18,12 +18,13 @@ interface ISidescrollSceneOptions {
 export class SidescrollScene extends Container implements IScene {
   public gravity = 0.7
   public gameEnded = false
+  public winOffset = 4500
 
   public viewWidth!: number
   public viewHeight!: number
   public world!: Container
   public background!: Sprite
-  public platforms!: Container
+  public platforms!: Platforms
   public player!: Player
   public moveLevelBounds!: Graphics
   public moveLevelBoundsOptions = {
@@ -42,7 +43,7 @@ export class SidescrollScene extends Container implements IScene {
     this.addEventLesteners()
   }
 
-  setup ({ viewWidth, viewHeight, backgroundTexture, hillsTexture, platformTexture, playerTextures }: ISidescrollSceneOptions): void {
+  setup ({ viewWidth, viewHeight, backgroundTexture, hillsTexture, platformTexture, platformSmallTallTexture, playerTextures }: ISidescrollSceneOptions): void {
     const world = new Container()
 
     const background = new Sprite(backgroundTexture)
@@ -53,15 +54,11 @@ export class SidescrollScene extends Container implements IScene {
     hills.position.y = background.height - hills.height
     background.addChild(hills)
 
-    this.platforms = new Container()
-
-    const platform1 = new Platform(platformTexture)
-    platform1.position.y = background.height - platform1.height
-    this.platforms.addChild(platform1)
-
-    const platform2 = new Platform(platformTexture)
-    platform2.position.set(platform1.width, platform1.y - platform2.height)
-    this.platforms.addChild(platform2)
+    this.platforms = new Platforms({
+      platformTexture,
+      platformSmallTallTexture,
+      bottom: background.height
+    })
 
     world.addChild(this.platforms)
 
@@ -167,7 +164,7 @@ export class SidescrollScene extends Container implements IScene {
       this.endGame(false)
     } else {
       this.player.update()
-      if (this.player.x > 2000) {
+      if (this.player.x > this.winOffset) {
         this.endGame(true)
       }
     }

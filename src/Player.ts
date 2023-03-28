@@ -29,6 +29,7 @@ export class Player extends Container {
     vy: 0
   }
 
+  public idleAnimation = PlayerAnimation.idleRight
   public animation!: PlayerAnimation
   public idleLeft!: AnimatedSprite
   public idleRight!: AnimatedSprite
@@ -50,7 +51,7 @@ export class Player extends Container {
     this.setup(options)
     this.draw(options)
 
-    this.switchAnimation(PlayerAnimation.idleRight)
+    this.switchAnimation(this.idleAnimation)
   }
 
   setup ({
@@ -185,21 +186,24 @@ export class Player extends Container {
       case PlayerAnimation.runLeft:
         this.runLeft.play()
         this.runLeft.visible = true
+        this.idleAnimation = PlayerAnimation.idleLeft
         break
       case PlayerAnimation.runRight:
         this.runRight.play()
         this.runRight.visible = true
+        this.idleAnimation = PlayerAnimation.idleRight
         break
     }
     this.animation = animation
   }
 
   updateAnimation (): void {
-    this.switchAnimation(Player.ANIMATION.idleRight)
     if (this.velocity.vx > 0) {
       this.switchAnimation(Player.ANIMATION.runRight)
     } else if (this.velocity.vx < 0) {
       this.switchAnimation(Player.ANIMATION.runLeft)
+    } else {
+      this.switchAnimation(this.idleAnimation)
     }
   }
 
