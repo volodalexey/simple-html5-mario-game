@@ -18,7 +18,7 @@ class DefaultScene extends Container implements IScene {
 // eslint-disable-next-line @typescript-eslint/no-extraneous-class
 export abstract class SceneManager {
   private constructor () { }
-  private static app: Application<HTMLCanvasElement>
+  public static app: Application<HTMLCanvasElement>
   private static currentScene: IScene = new DefaultScene()
   private static resizeTimeoutId: NodeJS.Timeout
   private static readonly resizeTimeout = 300

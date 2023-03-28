@@ -8,7 +8,8 @@ export const manifest: ResolverManifest = {
       name: 'bundle-1',
       assets: {
         spritesheet: 'assets/spritesheets/spritesheet.json',
-        background: 'assets/images/background.png'
+        background: 'assets/images/background.png',
+        hills: 'assets/images/hills.png'
       }
     }
   ]
@@ -74,10 +75,15 @@ export class LoaderScene extends Container implements IScene {
     this.loaderBarFill.width = (this.barOptions.width - this.barOptions.borderThick * 2) * progressRatio
   }
 
-  public getAssets (): { spritesheet: Spritesheet, backgroundTexture: Texture } {
+  public getAssets (): {
+    spritesheet: Spritesheet
+    backgroundTexture: Texture
+    hillsTexture: Texture
+  } {
     return {
       spritesheet: Assets.get('spritesheet'),
-      backgroundTexture: Assets.get('background')
+      backgroundTexture: Assets.get('background'),
+      hillsTexture: Assets.get('hills')
     }
   }
 

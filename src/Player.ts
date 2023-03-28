@@ -1,5 +1,5 @@
 import { AnimatedSprite, Container, Graphics, type Texture } from 'pixi.js'
-import { logPlayerBox, logPlayerBounds, logPlayerGravity, logPlayerMove, logPlayerDirection } from './logger'
+import { logPlayerBox, logPlayerMove } from './logger'
 
 export interface IPlayerOptions {
   textures: {
@@ -19,17 +19,10 @@ export enum PlayerAnimation {
 
 export class Player extends Container {
   static ANIMATION = PlayerAnimation
-  public pointerXDown = -1
-  public pointerYDown = -1
+  public pointerXDown: number | null = null
+  public pointerYDown: number | null = null
   public moveSpeed = 8
   public jumpSpeed = 20
-
-  private readonly directionPressed: Record<'top' | 'right' | 'bottom' | 'left', boolean> = {
-    top: false,
-    right: false,
-    bottom: false,
-    left: false
-  }
 
   public velocity = {
     vx: 0,
@@ -140,56 +133,40 @@ export class Player extends Container {
     })
   }
 
-  releaseAllPressures (): void {
-    this.directionPressed.top = false
-    this.directionPressed.right = false
-    this.directionPressed.bottom = false
-    this.directionPressed.left = false
-  }
-
   setTopDirectionPressed (pressed: boolean): void {
-    this.directionPressed.top = pressed
+    this.pointerYDown = pressed ? -1 : null
   }
 
   setLeftDirectionPressed (pressed: boolean): void {
-    this.directionPressed.left = pressed
+    this.pointerXDown = pressed
+      ? -1
+      : (this.pointerXDown === -1 ? null : this.pointerXDown)
   }
 
   setRightDirectionPressed (pressed: boolean): void {
-    this.directionPressed.right = pressed
-  }
-
-  setBottomDirectionPressed (pressed: boolean): void {
-    this.directionPressed.bottom = pressed
+    this.pointerXDown = pressed
+      ? 1
+      : (this.pointerXDown === 1 ? null : this.pointerXDown)
   }
 
   isPointerDown (): boolean {
-    return this.pointerXDown >= 0 && this.pointerYDown >= 0
+    return this.pointerXDown !== null && this.pointerYDown !== null
   }
 
   handleMove (pressed: boolean | undefined, x: number, y: number): void {
-    const { directionPressed } = this
-    if (typeof pressed === 'boolean') {
-      this.pointerXDown = pressed ? x : -1
-      this.pointerYDown = pressed ? y : -1
-    }
-
-    this.releaseAllPressures()
-    const { centerX, centerY } = this.getCenter()
-    if (this.isPointerDown()) {
-      if (x > centerX) {
-        directionPressed.right = true
-      } else if (x < centerX) {
-        directionPressed.left = true
+    const { centerX } = this.getCenter()
+    if (pressed === true) {
+      this.pointerXDown = x - centerX
+      this.pointerYDown = y - this.y
+    } else if (pressed === false) {
+      this.pointerXDown = null
+      this.pointerYDown = null
+    } else {
+      if (this.isPointerDown()) {
+        logPlayerMove(`player-pointer-down x=${x} y=${x}`)
+        this.pointerXDown = x - centerX
+        this.pointerYDown = y - this.y
       }
-
-      if (y > centerY) {
-        directionPressed.bottom = true
-      } else if (y < centerY) {
-        directionPressed.top = true
-      }
-      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-      logPlayerDirection(`dp-t=${directionPressed.top} dp-r=${directionPressed.right} dp-b=${directionPressed.bottom} dp-l=${directionPressed.left}`)
     }
   }
 
@@ -226,55 +203,15 @@ export class Player extends Container {
     }
   }
 
-  update ({
-    gravity,
-    levelLeft,
-    levelRight,
-    levelBottom
-  }: {
-    gravity: number
-    levelLeft: number
-    levelRight: number
-    levelBottom: number
-  }): void {
-    const { position, velocity, directionPressed, jumpSpeed, moveSpeed } = this
-    // if (this.isPointerDown()) {
-    //   this.handleMove(undefined, this.pointerXDown, this.pointerYDown)
-    // }
-    if (directionPressed.top && velocity.vy === 0) {
-      velocity.vy = -jumpSpeed
-    }
-    if (directionPressed.left) {
-      velocity.vx = -moveSpeed
-    } else if (directionPressed.right) {
-      velocity.vx = moveSpeed
-    } else {
-      velocity.vx = 0
-    }
-
-    const { bottom, left, right, width, height } = this.getBounds()
-    logPlayerBounds(`pl=${left} pr=${right} pw=${width} ph=${height}`)
-    if (bottom + velocity.vy >= levelBottom) {
-      logPlayerGravity(`Floor bot=${bottom} vy=${velocity.vy} fl=${levelBottom}`)
-      velocity.vy = 0
-      position.y = levelBottom - height
-    } else {
-      logPlayerGravity(`Gravity bot=${bottom} vy=${velocity.vy} fl=${levelBottom}`)
-      velocity.vy += gravity
-      position.y += velocity.vy
-    }
-
-    logPlayerMove(`Move left=${left} right=${right} vy=${velocity.vx}`)
-    if (left + velocity.vx < levelLeft) {
-      velocity.vx = 0
-      position.x = levelLeft
-    } else if (right + velocity.vx > levelRight) {
-      velocity.vx = 0
-      position.x = levelRight - width
-    } else {
-      position.x += velocity.vx
-    }
-
+  update (): void {
     this.updateAnimation()
+  }
+
+  reset (): void {
+    this.stopAllAnimations()
+    this.velocity.vx = 0
+    this.velocity.vy = 0
+    this.pointerXDown = null
+    this.pointerYDown = null
   }
 }

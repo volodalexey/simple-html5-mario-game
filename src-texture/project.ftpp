@@ -5,6 +5,16 @@
   "savePath": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture",
   "images": [
     {
+      "name": "Platform.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/Platform.png",
+      "folder": ""
+    },
+    {
+      "name": "PlatformSmallTall.png",
+      "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlatformSmallTall.png",
+      "folder": ""
+    },
+    {
       "name": "PlayerRunLeft-000.png",
       "path": "/mnt/mystorage/js_projects/simple-html5-mario-game/src-texture/PlayerRunLeft-000.png",
       "folder": ""

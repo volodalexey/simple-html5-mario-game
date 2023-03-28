@@ -1,4 +1,4 @@
-import { Container, Graphics, Text } from 'pixi.js'
+import { Container, Graphics, Text, type TextStyleFontWeight } from 'pixi.js'
 
 interface IStartModalOptions {
   viewWidth: number
@@ -7,6 +7,7 @@ interface IStartModalOptions {
 
 export class StartModal extends Container {
   public modalBox!: Graphics
+  public reasonText!: Text
   public button!: Graphics
   public buttonText!: Text
   public boxOptions = {
@@ -14,6 +15,13 @@ export class StartModal extends Container {
     width: 300,
     height: 200,
     borderRadius: 5
+  }
+
+  public reasonTextOptions = {
+    top: -50,
+    textColor: 0x000000,
+    textSize: 40,
+    fontWeight: 'bold'
   }
 
   public buttonOptions = {
@@ -42,7 +50,16 @@ export class StartModal extends Container {
     this.modalBox = new Graphics()
     this.addChild(this.modalBox)
 
-    const { boxOptions, buttonTextOptions } = this
+    const { boxOptions, reasonTextOptions, buttonTextOptions } = this
+
+    this.reasonText = new Text('-', {
+      fontSize: reasonTextOptions.textSize,
+      fill: reasonTextOptions.textColor,
+      fontWeight: reasonTextOptions.fontWeight as TextStyleFontWeight
+    })
+    this.reasonText.anchor.set(0.5, 0.5)
+    this.reasonText.position.set(boxOptions.width / 2, boxOptions.height / 2 + reasonTextOptions.top)
+    this.addChild(this.reasonText)
 
     this.button = new Graphics()
     this.button.interactive = true

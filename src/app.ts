@@ -15,11 +15,14 @@ async function run (): Promise<void> {
   })
   await SceneManager.changeScene(loaderScene)
   await loaderScene.initializeLoader()
-  const { backgroundTexture, spritesheet: { animations } } = loaderScene.getAssets()
+  const { backgroundTexture, hillsTexture, spritesheet: { textures, animations } } = loaderScene.getAssets()
   await SceneManager.changeScene(new SidescrollScene({
     viewWidth: SceneManager.width,
     viewHeight: SceneManager.height,
     backgroundTexture,
+    hillsTexture,
+    platformTexture: textures['Platform.png'],
+    platformSmallTallTexture: textures['PlatformSmallTall.png'],
     playerTextures: {
       idleLeftTexture: animations.PlayerStandLeft,
       idleRightTexture: animations.PlayerStandRight,
