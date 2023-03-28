@@ -86,7 +86,7 @@ export class SidescrollScene extends Container implements IScene {
   handleResize (options: { viewWidth: number, viewHeight: number }): void {
     this.viewWidth = options.viewWidth
     this.viewHeight = options.viewHeight
-    this.resizeBackground(options)
+    this.resizeWorld(options)
     this.centerModal(options)
   }
 
@@ -94,10 +94,22 @@ export class SidescrollScene extends Container implements IScene {
     this.startModal.position.set(viewWidth / 2 - this.startModal.boxOptions.width / 2, viewHeight / 2 - this.startModal.boxOptions.height / 2)
   }
 
-  resizeBackground ({ viewWidth, viewHeight }: { viewWidth: number, viewHeight: number }): void {
+  resizeWorld ({ viewWidth, viewHeight }: { viewWidth: number, viewHeight: number }): void {
     logLayout(`bgw=${this.world.width} bgh=${this.world.height} vw=${viewWidth} vh=${viewHeight}`)
-    // this.background.width = viewWidth
-    // this.world.height = viewHeight
+    const availableWidth = viewWidth
+    const availableHeight = viewHeight
+    const totalWidth = this.background.texture.width
+    const totalHeight = this.background.texture.height
+    const scale = availableHeight / totalHeight
+    logLayout(`By height (sc=${scale})`)
+    const occupiedWidth = Math.floor(totalWidth * scale)
+    const occupiedHeight = Math.floor(totalHeight * scale)
+    const y = availableHeight > occupiedHeight ? (availableHeight - occupiedHeight) / 2 : 0
+    logLayout(`aw=${availableWidth} (ow=${occupiedWidth}) ah=${availableHeight} (oh=${occupiedHeight}) y=${y}`)
+    this.world.width = occupiedWidth
+    this.world.y = y
+    this.world.height = occupiedHeight
+    logLayout(`y=${y} w=${this.width} h=${this.height}`)
   }
 
   handleUpdate (): void {
@@ -129,13 +141,17 @@ export class SidescrollScene extends Container implements IScene {
       position.x += velocity.vx
     }
 
+    const worldPlayer = this.player.position
+    const worldPlayerRight = worldPlayer.x + this.player.width
+    const worldPlayerBottom = worldPlayer.y + this.player.height
     if (this.platforms.children.some((child) => {
-      const platformBounds = child.getBounds()
-      if (right >= platformBounds.left && left <= platformBounds.right &&
-        bottom + velocity.vy >= platformBounds.y && bottom <= platformBounds.y) {
-        logPlayerGravity(`Floor bot=${bottom} vy=${velocity.vy} fl=${platformBounds.y}`)
+      const worldPlatform = child.position
+      const worldPlatformRight = worldPlatform.x + (child as Sprite).width
+      if (worldPlayerRight >= worldPlatform.x && worldPlayer.x <= worldPlatformRight &&
+        worldPlayerBottom + velocity.vy >= worldPlatform.y && worldPlayerBottom <= worldPlatform.y) {
+        logPlayerGravity(`Floor bot=${bottom} vy=${velocity.vy} fl=${worldPlatform.y}`)
         velocity.vy = 0
-        position.y = platformBounds.y - height
+        position.y = worldPlatform.y - this.player.height
         return true
       }
       return false
@@ -143,8 +159,8 @@ export class SidescrollScene extends Container implements IScene {
       // on some platform
     } else {
       logPlayerGravity(`Gravity bot=${bottom} vy=${velocity.vy}`)
-      velocity.vy += this.gravity
       position.y += velocity.vy
+      velocity.vy += this.gravity
     }
     const playerGlobal = this.player.toGlobal(this)
     if (playerGlobal.x + width > this.moveLevelBounds.x + this.moveLevelBounds.width && velocity.vx > 0) {
