@@ -176,7 +176,7 @@ export class SidescrollScene extends Container implements IScene {
     } else {
       this.background.pivot.x = 0
     }
-    if (bottom > this.background.height) {
+    if (bottom > this.background.height * this.world.scale.y) {
       this.endGame(false)
     } else {
       this.player.update()
