@@ -7,7 +7,7 @@ interface IPlatformsOptions {
   bottom: number
 }
 
-export class Platforms extends Container {
+export class Platforms extends Container<Platform> {
   constructor (options: IPlatformsOptions) {
     super()
     this.setup(options)

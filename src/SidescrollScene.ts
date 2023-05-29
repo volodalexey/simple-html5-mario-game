@@ -145,13 +145,14 @@ export class SidescrollScene extends Container implements IScene {
     const worldPlayerRight = worldPlayer.x + this.player.width
     const worldPlayerBottom = worldPlayer.y + this.player.height
     if (this.platforms.children.some((child) => {
-      const worldPlatform = child.position
-      const worldPlatformRight = worldPlatform.x + (child as Sprite).width
-      if (worldPlayerRight >= worldPlatform.x && worldPlayer.x <= worldPlatformRight &&
-        worldPlayerBottom + velocity.vy >= worldPlatform.y && worldPlayerBottom <= worldPlatform.y) {
-        logPlayerGravity(`Floor bot=${bottom} vy=${velocity.vy} fl=${worldPlatform.y}`)
+      const worldPlatformLeft = child.position.x
+      const worldPlatformRight = worldPlatformLeft + child.width
+      const worldPlatformTop = child.position.y
+      if (worldPlayerRight >= worldPlatformLeft && worldPlayer.x <= worldPlatformRight &&
+        worldPlayerBottom + velocity.vy >= worldPlatformTop && worldPlayerBottom <= worldPlatformTop) {
+        logPlayerGravity(`Floor bot=${bottom} vy=${velocity.vy} fl=${worldPlatformTop}`)
         velocity.vy = 0
-        position.y = worldPlatform.y - this.player.height
+        position.y = worldPlatformTop - this.player.height
         return true
       }
       return false
